@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>隐私政策 - {{你的应用名}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial; max-width: 800px; margin: 40px auto; padding: 0 16px; line-height: 1.7;">
+  <h1>隐私政策</h1>
+  <p><strong>生效日期：</strong>2026-07-22</p>
+  <p><strong>应用名称：</strong>{{你的应用名}}（以下简称“本应用”）</p>
+  <p><strong>运营主体：</strong>{{公司名/个人名}}</p>
+  <p><strong>联系邮箱：</strong>{{你的邮箱}}</p>
+
+  <h2>1. 概述</h2>
+  <p>本应用通过 TikTok for Developers 提供的 Login Kit 与 Display API，在获得 TikTok 用户明确授权后，读取该用户自有 TikTok 企业号的部分公开数据，用于企业内部数据分析与经营概览展示。</p>
+
+  <h2>2. 我们获取的数据</h2>
+  <ul>
+    <li>账号基础信息：昵称、头像、Open ID（经 <code>user.info.basic</code> 获取）</li>
+    <li>账号概览指标：粉丝数、关注数、获赞总数、视频数（经 <code>user.info.stats</code> 获取）</li>
+    <li>视频列表与元数据：已发布视频标题、封面、发布时间、播放/点赞/评论/分享数（经 <code>video.list</code> 与 <code>video.insights</code> 获取）</li>
+  </ul>
+  <p>我们<strong>不收集</strong>用户的私信、登录密码、手机号、精确地理位置，也不收集 TikTok 未通过授权接口返回的受众画像数据。</p>
+
+  <h2>3. 数据使用目的</h2>
+  <ul>
+    <li>在企业内部 BI 系统中展示账号概览与视频表现</li>
+    <li>计算播放量趋势、互动率等聚合指标</li>
+    <li>排查接口异常与数据对账</li>
+  </ul>
+
+  <h2>4. 数据存储与安全</h2>
+  <p>授权获取的 <code>access_token</code> 与 <code>refresh_token</code> 加密存储于服务端环境变量或密钥管理中，不在前端明文暴露。视频元数据仅保留最近 365 天，定期清理。服务器访问受 IP 白名单与最小权限控制。</p>
+
+  <h2>5. 数据共享</h2>
+  <p>我们不会将 TikTok 用户数据出售给第三方。仅限授权企业员工在内网系统查看，不对外公开。</p>
+
+  <h2>6. 用户权利</h2>
+  <p>用户可随时在 TikTok App 的「设置 → 隐私 → 管理应用授权」中取消对本应用的授权，取消后我们将停止拉取并删除该 Open ID 下的缓存数据。</p>
+
+  <h2>7. 合规</h2>
+  <p>本政策参照 GDPR、CCPA 及 TikTok Developer Guidelines 编写。如有疑问请联系 {{你的邮箱}}。</p>
+</body>
+</html>
